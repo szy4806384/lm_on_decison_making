@@ -8,8 +8,8 @@ The project is still under development.
 
 # Data Generation
 
-You may refer to the file ```Data_Generation.ipynb``` for our way to generate expert demonstration for our project. The code was developed in Google Colab with GPU support. It leverages the implementaion of zero-shot learning technique proposed in (Language Models as Zero-Shot Planners:
-Extracting Actionable Knowledge for Embodied Agents)[https://arxiv.org/pdf/2201.07207.pdf]. (TODO) Our implementation further supports VirtualHome validation on generated data in order to ensure the fidelity of the data during training. Details can be found in the notebook.
+You may refer to the file ```Data_Generation.ipynb``` for our way to generate expert demonstration for our project. The code was developed in Google Colab with GPU support. It leverages the implementaion of zero-shot learning technique proposed in [Language Models as Zero-Shot Planners:
+Extracting Actionable Knowledge for Embodied Agents](https://arxiv.org/pdf/2201.07207.pdf). (TODO) Our implementation further supports VirtualHome validation on generated data in order to ensure the fidelity of the data during training. Details can be found in the notebook.
 
 # Language Model on Deicsion Making
 
