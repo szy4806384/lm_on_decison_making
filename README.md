@@ -19,7 +19,7 @@ You may refer to our implementation of [Pre-Trained Language Models for Interact
 
 We first consider the simple success rate of different Language Models using different number of training demos measured by
 
-````math
+```math
 $$S = \frac{\text{number of successes}}{\text{number of demos}}$$
 ```
 
@@ -29,12 +29,12 @@ When using this evaluation metric, we only consider if the model successfully co
 
 In reality, not only would we care about whether the model successfully completes the task, but the time it spends, the trajectory it chooses, and whether it does irrelevant things are also the key elements for evaluation. We hope to introduce other metrics to include these concerns. In contrast to success rate, the loss of a model can simultaneously take if the model completes the task and if a model completes it in an efficient way into account. We define the loss of a model for a single demo i as
 
-````math
+```math
 $$loss_i = 1 - \mathbbm{1}_{success}{[i]} \cdot \frac{ODS_i}{ADS_i}$$
 ```
 where $ODS_i$ and $ADS_i$ are the number of optimal decision steps and the number of actual decision steps. The optimal number of steps can be predetermined. Thus, whenever the model fails the task, the loss will be 1. If the task is completed, then the loss will be smaller as the model uses less decision steps. The minimum value of $loss_i$ would be 0. We aggregate the single loss over all demos to get the loss of the model as
 
-````math
+```math
 $$L = \frac{1}{N}\displaystyle\sum_{i=1}^{N} loss_i$$
 ```
 
