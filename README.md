@@ -40,4 +40,8 @@ L = \frac{1}{N}\displaystyle\sum_{i=1}^{N} loss_i
 
 # VirtualHome Demo
 
-We also provide a demostration for the VitualHome environment we are using. Pleas check ```unity_demo.ipynb``` for more details. 
+We also provide a demostration for the VitualHome environment we are using. Pleas check ```unity_demo.ipynb``` for more details.
+
+# Data
+
+train: https://drive.google.com/file/d/1DKcPewW8f-gJpD7NIB7eNOWsAUwT_URG/view?usp=sharing
