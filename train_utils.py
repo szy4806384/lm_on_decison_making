@@ -15,7 +15,7 @@ NAMES_LENGTH = 256*2
 
 class VHDataloader:
     class VHStructuredDataset(Dataset):
-        def __init__(self, data_pth mini_batch = False):
+        def __init__(self, data_pth, mini_batch = False):
             self.data = {'goal': None,
                         'history': None,
                         'obs_ids': None,
@@ -52,7 +52,7 @@ class VHDataloader:
                     'object_label':object_label}
             
         def __len__(self):
-            return len(self.data['goal']) if not self.mini_batch else 10
+            return len(self.data['goal']) if not self.mini_batch else 5
 
 
     def __init__(self, data_pth, batch_size = 16, num_workers = 2, mini_batch = False):
