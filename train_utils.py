@@ -103,7 +103,7 @@ def preprocess(data, tokenizer, embeddings):
 
 
 class LMDecisionMaker(nn.Module):
-    def __init__(self):
+    def __init__(self, pretrained_lm = 'gpt2'):
         super().__init__()
         # define the layer in LM framework
         self.state_fc = nn.Linear(6, 3*768).to(device)
@@ -116,7 +116,6 @@ class LMDecisionMaker(nn.Module):
         self.object1_fc = nn.Linear(512, 512).to(device)
         self.object2_fc = nn.Linear(512, 512).to(device)
         self.lm = GPT2Model.from_pretrained(pretrained_lm).to(device)
-        self.alpha = 5
     
     def lm_infer(self, input):
         return self.lm(inputs_embeds=input).last_hidden_state
