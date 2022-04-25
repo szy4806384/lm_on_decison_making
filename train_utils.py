@@ -15,7 +15,7 @@ NAMES_LENGTH = 256*2
 
 class VHDataloader:
     class VHStructuredDataset(Dataset):
-        def __init__(self, data_pth):
+        def __init__(self, data_pth mini_batch = False):
             self.data = {'goal': None,
                         'history': None,
                         'obs_ids': None,
@@ -25,6 +25,7 @@ class VHDataloader:
                         'char_label': None,
                         'action_label': None,
                         'object_label': None}
+            self.mini_batch = mini_batch
 
             for key in self.data:
                 self.data[key] = np.load(os.path.join(data_pth,"{}.npy".format(key)), allow_pickle=True)
@@ -51,13 +52,13 @@ class VHDataloader:
                     'object_label':object_label}
             
         def __len__(self):
-            return len(self.data['goal'])
+            return len(self.data['goal']) if not self.mini_batch else 10
 
 
-    def __init__(self, data_pth, batch_size = 16, num_workers = 2):
+    def __init__(self, data_pth, batch_size = 16, num_workers = 2, mini_batch = False):
         with open(os.path.join(data_pth, 'relationships'), 'r') as f:
             self.relationships =  json.load(f)
-        self.structured_dataset = self.VHStructuredDataset(data_pth)
+        self.structured_dataset = self.VHStructuredDataset(data_pth, mini_batch)
         self.dataloader = DataLoader(self.structured_dataset,
                                      batch_size=batch_size,
                                      num_workers=num_workers)
