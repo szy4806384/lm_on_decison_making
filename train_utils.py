@@ -187,15 +187,11 @@ class LMDecisionMaker(nn.Module):
             # simple accuracy calculation, different from inference time
             return loss, accuracy
 
-        next_predicate = self.predictor(char_prediction,
-                                        action_prediction,
-                                        object1_prediction,
-                                        object2_prediction,
-                                        obs_ids,
-                                        obs_names,
-                                        relationships)
 
-        return next_predicate
+        return {'char':char_prediction,
+                'action':action_prediction,
+                'object1':object1_prediction,
+                'object2':object2_prediction}
 
     def predictor(self,
                   char_prediction,
