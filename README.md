@@ -8,7 +8,7 @@ The project is still under development.
 
 # Data Generation
 
-You may refer to the file ```LAPKT_Action_Generation.ipynb``` for our way to generate expert demonstration for our project. The code leverages SIW+BFSF algorithm to search for optimal action list for two fully observing agents.
+Steps for simplified environment generation and goals creating are written in ```generate_simple_VH```. You may refer to the file ```LAPKT_Action_Generation.ipynb``` for our way to generate expert demonstration for our project. The code leverages SIW+BFSF algorithm to search for optimal action list for two fully observing agents.
 
 # Language Model on Deicsion Making
 
