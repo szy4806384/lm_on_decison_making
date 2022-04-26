@@ -24,4 +24,6 @@ https://drive.google.com/drive/folders/1iPBoi_09QV5UEseg_eZjLq6DBne3NL6_?usp=sha
 
 # Trained Model
 
-https://drive.google.com/file/d/1-L0TM1NTaxKxNePALauCnE78BvrrEiiT/view?usp=sharing
+MLP model (57% accuracy): https://drive.google.com/file/d/1Z8UJHKC_yL8R_qLPlFH-S5gTp1-6UYgZ/view?usp=sharing
+
+GPT2 model (49% accuracy)https://drive.google.com/file/d/1-L0TM1NTaxKxNePALauCnE78BvrrEiiT/view?usp=sharing
